@@ -1,6 +1,6 @@
+{% extends "linkservice/wrapper.html" %}
 {% block content %}
-   <p>Сокращённая ссылка: </p>
-    {% for val in values %}
-        <p>{{ val }}</p>
+    {% for short in object_list %}
+    <a href="/in_request/{{ short }}"><h3>http://localhost:8000/{{ short }}</h3></a>
     {% endfor %}
 {% endblock %}
